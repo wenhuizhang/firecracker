@@ -1,4 +1,4 @@
-![Firecracker Logo Title](docs/images/fc_logo_full_transparent-bg.png)
+# Firecracker
 
 
 ## Getting Started
