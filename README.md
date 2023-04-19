@@ -139,7 +139,7 @@ curl --unix-socket /tmp/firecracker.socket -i \
 git clone https://github.com/torvalds/linux.git
 cd linux
 git checkout v5.15.0
-cp ../firecracker/resources/guest_configs/microvm-kernel-arm64-4.14.config .config
+cp ../firecracker/resources/guest_configs/microvm-kernel-x86_64-4.14.config .config
 make vmlinux 
 # make Image 
 ```
