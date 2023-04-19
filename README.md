@@ -167,7 +167,11 @@ In another terminal, run this bash:
 
 ```
 # 设置虚拟器内核
+set -m 
+set -x
+
 kernel_path=/data02/linux.git/vmlinux
+# kernel_path=/data02/hello-vmlinux.bin
 curl --unix-socket /tmp/firecracker.socket -i \
     -X PUT 'http://localhost/boot-source'   \
     -H 'Accept: application/json'           \
@@ -177,7 +181,9 @@ curl --unix-socket /tmp/firecracker.socket -i \
         \"boot_args\": \"console=ttyS0 reboot=k panic=1 pci=off\"
       }"
 # 设置虚拟机根文件系统
-rootfs_path=/data02/firecracker/rootfs.ext4
+# rootfs_path=/data02/hello-rootfs.ext4 
+rootfs_path=/data02/bionic.rootfs.ext4_firecracker_2G 
+# rootfs_path=/data02/rootfs.ext4
 curl --unix-socket /tmp/firecracker.socket -i \
   -X PUT 'http://localhost/drives/rootfs' \
   -H 'Accept: application/json'           \
