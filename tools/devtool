@@ -2010,8 +2010,8 @@ cmd_build_kernel() {
 #
 cmd_build_rootfs() {
     # Default size for the resulting rootfs image is 300MB.
-    SIZE="300MB"
-    FROM_CTR=ubuntu:18.04
+    SIZE="2G"
+    FROM_CTR=ubuntu:22.04
     flavour="bionic"
 
     # Parse the command line args.
