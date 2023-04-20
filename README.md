@@ -153,6 +153,16 @@ mkdir /tmp/my-rootfs
 sudo mount rootfs.ext4 /tmp/my-rootfs
 ```
 
+
+```
+# 2GB 22.04 
+/data02/firecracker/tools# ./devtool build_rootfs -s 2
+cp  /data02/firecracker/build/rootfs/bionic.rootfs.ext4 /data02
+mount bionic.rootfs.ext4 /tmp/my-rootfs/
+cp -R /root/umk-bench /tmp/my-rootfs/
+cp -R /usr/*  /tmp/my-rootfs/usr/
+```
+
 ## Test new Image
 
 
