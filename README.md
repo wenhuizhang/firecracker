@@ -7,6 +7,15 @@ To get started with Firecracker, download the latest
 [release](https://github.com/firecracker-microvm/firecracker/releases) binaries
 or build it from source.
 
+Install docker
+```
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu `lsb_release -cs` test"
+sudo apt update
+sudo apt install docker-ce
+```
+
 You can build Firecracker on any Unix/Linux system that has Docker running
 (we use a development container) and `bash` installed, as follows:
 
