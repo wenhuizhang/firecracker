@@ -2012,7 +2012,7 @@ cmd_build_rootfs() {
     # Default size for the resulting rootfs image is 300MB.
     SIZE="2G"
     FROM_CTR=ubuntu:22.04
-    flavour="bionic"
+    flavour="jammy"
 
     # Parse the command line args.
     while [ $# -gt 0 ]; do
